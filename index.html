@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency converter | nightcoding.life</title>
+    <meta name="robots" content="noindex" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/lightning.png" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inconsolata:400,700,900&amp;subset=latin-ext"
+    />
+  </head>
+  <body>
+    <div class="general-wrapper">
+      <header class="box header">
+        <h1>Currency converter</h1>
+        <p>Video #77</p>
+      </header>
+      <main class="box main-wrapper app">
+        <form>
+          <input type="number" name="from_amount" title="amount" />
+          <select name="from_currency">
+            <option>Select a currency</option>
+          </select>
+          <p>in</p>
+          <select name="to_currency">
+            <option>Select a currency</option>
+          </select>
+          <p>is</p>
+          <p class="to_amount">$0</p>
+        </form>
+      </main>
+      <article class="box">
+        <h2>Notes:</h2>
+        <p>
+          Due to frequently Api requests limitations per hour you have to watch
+          out for the fetching data mechanics. In this particular app, there was
+          a risk of fetching data every time you write a number in the amount
+          field.
+        </p>
+        <img class="image" src="img/convert.PNG" alt="" />
+        <p>
+          <strong>Trick:</strong> listening for input in form covers all inputs
+          in this form via current target and target.
+        </p>
+        <p>
+          Another built-in API for currency specific formatting:
+        </p>
+        <img class="image" src="img/floor-api.PNG" alt="" />
+      </article>
+      <footer class="box footer-wrapper">
+        nightcoding.life
+      </footer>
+    </div>
+    <!-- JS -->
+    <script src="converter.js"></script>
+  </body>
+</html>
